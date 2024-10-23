@@ -15,6 +15,7 @@
  */
 function logNames(items) {
   // TODO: use `forEach`
+  items.forEach(items => console.log(items));
 }
 
 /**
@@ -23,6 +24,8 @@ function logNames(items) {
  */
 function getUppercaseNames(items) {
   // TODO: use `map`
+  const upper = items.map(element => element.name.toUpperCase());
+  console.log(upper);
 }
 
 /**
@@ -32,7 +35,9 @@ function getUppercaseNames(items) {
  */
 function getItemById(items, id) {
   // TODO: use `find`
-}
+  const found = items.find(element => element.id === id);
+  console.log(found);
+}3
 
 /**
  * @param {Item[]} items - array of items
@@ -41,6 +46,11 @@ function getItemById(items, id) {
  */
 function getItemPriceByName(items, name) {
   // TODO: use a loop!
+  for (let i = 0; i < items.length; i++) {
+    if (items[i].name === name) {
+      return items[i].price;
+    }
+  }
 }
 
 /**
@@ -50,6 +60,8 @@ function getItemPriceByName(items, name) {
  */
 function getItemsByCategory(items, category) {
   // TODO: use `filter`
+  const filtered = items.filter(element => element.category === category);
+  console.log(filtered);
 }
 
 /**
