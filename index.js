@@ -25,7 +25,8 @@ function logNames(items) {
 function getUppercaseNames(items) {
   // TODO: use `map`
   const upper = items.map(element => element.name.toUpperCase());
-  console.log(upper);
+  // console.log(upper);
+  return upper;
 }
 
 /**
@@ -36,7 +37,8 @@ function getUppercaseNames(items) {
 function getItemById(items, id) {
   // TODO: use `find`
   const found = items.find(element => element.id === id);
-  console.log(found);
+  // console.log(found);
+  return found;
 }3
 
 /**
@@ -61,7 +63,8 @@ function getItemPriceByName(items, name) {
 function getItemsByCategory(items, category) {
   // TODO: use `filter`
   const filtered = items.filter(element => element.category === category);
-  console.log(filtered);
+  // console.log(filtered);
+  return filtered;
 }
 
 /**
@@ -70,7 +73,10 @@ function getItemsByCategory(items, category) {
  */
 function countItems(items) {
   // TODO: use `reduce`
-}
+  const total = items.reduce((acc, element) => acc + element.quantity, 0);
+  // console.log("item count is " + total);
+  return total
+} 
 
 /**
  * @param {Item[]} items - array of items
@@ -78,6 +84,9 @@ function countItems(items) {
  */
 function calculateTotalPrice(items) {
   // TODO: use `reduce`
+  const total = items.reduce((acc, element) => acc + element.price, 0);
+  // console.log("Total price is " + total);
+  return total;
 }
 
 // --------------------- DO NOT CHANGE THE CODE BELOW ------------------------ //
